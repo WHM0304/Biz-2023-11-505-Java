@@ -1,6 +1,6 @@
 package com.callor.hello.algorithm;
 
-public class AggF {
+public class AlgF {
 	public static void main(String[] args) {
 		
 		int pay = 3587960;
@@ -29,6 +29,8 @@ public class AggF {
 		System.out.println("50원권 : " + pay / 50 + "매");
 		pay = pay % 50;
 		System.out.println("10원권 : " + pay / 10 + "매");
+		pay = pay % 10;
+		
 		
 		
 		
