@@ -18,10 +18,24 @@ public class AlgC {
 		 */
 		bYes = num1 % 2 == 0;
 		
+		// if 명령문은 조건부 
 		if(bYes) {
 			System.out.println("짝수");
 		
 		}
+		
+		if(num1 % 2 == 0) {
+			System.out.println("짝수");
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 
