@@ -16,7 +16,7 @@ public class VarFA {
 		scoreEng = 70.3f;
 		scoreMath = 80.3f;
 		
-		total = scoreKor; 
+		total = scoreKor;
 		total = total + scoreEng;
 		total = total + scoreMath;
 		
