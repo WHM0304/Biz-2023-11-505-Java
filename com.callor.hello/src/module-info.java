@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module com.callor.hello {
-}
