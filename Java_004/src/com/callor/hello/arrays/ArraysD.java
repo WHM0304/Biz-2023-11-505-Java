@@ -1,13 +1,14 @@
 package com.callor.hello.arrays;
 
 public class ArraysD {
-	public static void main(String[] args) {
-		
+
+	public static void main(String[] args) {		
 		int STUDENT_LENGTH = 10;
+		int subject = 3;
 		int scoreKors[] = new int[STUDENT_LENGTH];
 		int scoreEng[] = new int[STUDENT_LENGTH];
 		int scoreMath[] = new int[STUDENT_LENGTH];
-		int sum = 0;
+		int sum = 0;		
 		float avg = 0;
 		for(int i = 0; i < scoreKors.length ; i++) {
 			int ranNum = (int)(Math.random() * 50) + 51;
@@ -31,7 +32,7 @@ public class ArraysD {
 		
 		for(int i = 0; i < STUDENT_LENGTH ; i++) {
 			sum = scoreKors[i] + scoreEng[i] + scoreMath[i];
-			avg = (float) sum / 3;
+			avg = (float) sum / subject;
 			System.out.printf("%3d  %3d  %3d     %d     %4.2f\n" , scoreKors[i] , scoreEng[i] , scoreMath[i] ,sum , avg);
 		}
 		System.out.println("=".repeat(30));
