@@ -2,20 +2,20 @@ package com.callor.oop.input;
 
 import java.util.Scanner;
 
+import com.callor.oop.utils.Line;
+
 public class InputG {
 
-	public static boolean isPrime(int num) {
-		int index = 0;
-		for (index = 2; index < num; index++) {
-			if (num % index == 0) {
+	public static boolean noPrime(int num) {
+		boolean noPrime = false;
+		for (int i = 2; i < num; i++) {
+			if (num % i == 0) {
+				noPrime = true;
 				break;
 			}
 		}
-		if (index < num) {
-			return false;
-		} else {
-			return true;
-		}
+
+		return noPrime;
 	}
 
 	public static void main(String[] args) {
@@ -26,25 +26,36 @@ public class InputG {
 			System.out.println("정수(QUIT:종료) >>");
 			String str = scan.nextLine();
 			if (str.equalsIgnoreCase("QUIT")) {
+				Line.dLine(50);
+				System.out.println("종료");
 				break;
 			}
 			try {
 				num = Integer.valueOf(str);
+
 			} catch (Exception e) {
 				System.out.println("정수를 정확히 입력해 주세요");
 				System.out.println("입력한 값 : " + str);
+				Line.dLine(50);
 				continue;
 			}
-			if (num > 1) {
-				System.out.println("값은 2 이상을 입력해야 합니다");
+			if (num < 2) {
+
 				System.out.println("입력한 값 : " + num);
+				System.out.println("2이상 입력해주세요");
+				Line.dLine(50);
 				continue;
 			}
-			if (isPrime(num)) {
-				System.out.printf("%d 는 소수이다" , num);
-				continue;
+			Line.dLine(50);
+			if (noPrime(num)) {
+				System.out.printf("%d 는 소수가 아닙니다.\n", num);
+			} else {
+				System.out.printf("%d 는 소수 입니다\n", num);
 			}
+			Line.dLine(50);
+
 		}
+		Line.dLine(50);
 
 	}
 
