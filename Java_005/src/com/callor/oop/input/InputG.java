@@ -26,7 +26,7 @@ public class InputG {
 			System.out.println("정수(QUIT:종료) >>");
 			String str = scan.nextLine();
 			if (str.equalsIgnoreCase("QUIT")) {
-				Line.dLine(50);
+				Line.sLine(50);
 				System.out.println("종료");
 				break;
 			}
@@ -46,6 +46,14 @@ public class InputG {
 				Line.dLine(50);
 				continue;
 			}
+			if (num % 2 == 0) {
+				Line.dLine(50);
+				System.out.println(num + " 는 짝수");
+			} else {
+				Line.dLine(50);
+				System.out.println(num + " 는 짝수가 아님");
+			}
+			
 			Line.dLine(50);
 			if (noPrime(num)) {
 				System.out.printf("%d 는 소수가 아닙니다.\n", num);
