@@ -32,13 +32,13 @@ public class StringC {
 		
 		while (scan.hasNext()) {
 
-			String line = scan.nextLine();
-			
+			String line = scan.nextLine();			
 			int sum = 0;
+			
 			String[] result = line.split(",");
-			for(int i = 0 ; i <result.length; i++) {
-				
-				System.out.println(result[i]);
+			for(int i = 1 ; i <result.length; i++) {
+				sum += Integer.valueOf(result[i]); 
+				System.out.printf("%s 번 총점 : %d\n",result[0] , sum);
 			}
 			
 			
