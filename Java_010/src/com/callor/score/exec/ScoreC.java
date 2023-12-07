@@ -12,7 +12,7 @@ public class ScoreC {
 		NumberService numService = new NumberService();
 		ScoreDto scoreDto = new ScoreDto();
 		List<ScoreDto> scores;
-		scores = new ArrayList<>();
+		scores = new ArrayList<ScoreDto>();
 		int start = 50;
 		int end = 100;
 //		List<ScoreDto> scores = new ArrayList<ScoreDto>();
