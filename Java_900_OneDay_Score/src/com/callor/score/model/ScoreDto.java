@@ -1,6 +1,6 @@
-package com.callor.score.scoredto;
+package com.callor.score.model;
 
-import com.callor.score.scoreservice.ScoreService;
+import com.callor.score.service.ScoreService;
 
 public class ScoreDto {
 	ScoreService scoreService = null;

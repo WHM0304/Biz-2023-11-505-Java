@@ -1,10 +1,10 @@
-package com.callor.score.scoreservice;
+package com.callor.score.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.callor.score.line.Line;
-import com.callor.score.scoredto.ScoreDto;
+import com.callor.score.model.ScoreDto;
 
 public class ScoreService {
 	private List<ScoreDto> scores = null;
@@ -53,17 +53,16 @@ public class ScoreService {
 			mathSum += scoreMath;
 			musicSum += scoreMusic;
 			artSum += scoreArt;
-			totalSum += scoreDto.getTotal();
-			korAvg = (float)korSum / index;
-			engAvg = (float)engSum / index;
-			mathAvg = (float)mathSum / index;
-			musicAvg = (float)musicSum / index;
-			artAvg = (float)artSum / index;
-			avgAvg = (korAvg + engAvg +mathAvg + musicAvg + artAvg) / 5;
+			totalSum += scoreDto.getTotal();			
 			scores.add(scoreDto);
 			
 		}
-
+		korAvg = (float)korSum / index;
+		engAvg = (float)engSum / index;
+		mathAvg = (float)mathSum / index;
+		musicAvg = (float)musicSum / index;
+		artAvg = (float)artSum / index;
+		avgAvg = (korAvg + engAvg +mathAvg + musicAvg + artAvg) / 5;
 	}// end inputScoreService
 
 	public void printScore() {
