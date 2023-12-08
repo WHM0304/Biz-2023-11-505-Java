@@ -100,7 +100,7 @@ public class ScoreService {
 		System.out.printf("%.2f\t",mathAvg);
 		System.out.printf("%.2f\t",musicAvg);
 		System.out.printf("%.2f\t\t",artAvg);
-		System.out.printf("%.2f",avgAvg);
+		System.out.printf("%.2f\n",avgAvg);
 		Line.dLine(100);
 		
 		
