@@ -6,7 +6,9 @@ public class MainA {
 	public static void main(String[] args) {
 		
 		StartService startService = new StartService();
-		startService.selectMenu();
+		// startService.mainMenu();
+		// startService.selectMenu();
+		startService.startApp();
 		
 		
 	}

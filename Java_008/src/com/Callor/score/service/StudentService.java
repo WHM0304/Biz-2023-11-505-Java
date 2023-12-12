@@ -39,7 +39,7 @@ public class StudentService {
 				studentDto.name = lines[3];
 				studentDto.name = lines[4];
 				studentDto.name = lines[5];
-				studentDto.name = lines[6];
+				
 			} catch (Exception e) {
 				System.out.println("데이터 읽는 중 오류발생");
 				System.out.println(line);

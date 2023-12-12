@@ -1,5 +1,8 @@
 package com.callor.student.service;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -22,12 +25,14 @@ public class StudentServiceV3 {
 	private List<StudentDto> students = null;
 	
 	
+	
 	// 클래스 영역에 선언된 변수는 생성자 method 에서
 	// 값을 초기화 하여 사용할 준비를 한다
 	public StudentServiceV3() {
 		
 		scan = new Scanner(System.in);
 		students = new ArrayList<StudentDto>();	
+		
 	}
 	private String itemInput(String title) {
 		while(true) {
@@ -136,9 +141,44 @@ public class StudentServiceV3 {
 			System.out.printf("%s\n",dto.addr);
 			
 		}
-	}
+	} // printStudent()
 
-	
+	public void loadStudent() {
+		String stFile = "src/com/callor/student/models/student.txt";
+		InputStream  is = null;
+		Scanner fileScan = null;
+		try {
+			is = new FileInputStream(stFile);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		fileScan = new Scanner(is);
+		
+		while(fileScan.hasNext()) {
+			String line = fileScan.nextLine();
+			String stds[] = line.split(",");
+			StudentDto stDto = new StudentDto();
+			
+			try {
+			stDto.num = stds[0];
+			stDto.name = stds[1];
+			stDto.dept= stds[2];
+			stDto.grade= stds[3];
+			stDto.tel= stds[4];
+			stDto.addr= stds[5];
+			
+				
+			} catch (Exception e) {
+				System.out.println("데이터 파일 읽는중 오류");
+				System.out.println(line);
+			}
+			students.add(stDto);
+			
+		}
+		fileScan.close();
+		  
+	}
 	
 	
 }
