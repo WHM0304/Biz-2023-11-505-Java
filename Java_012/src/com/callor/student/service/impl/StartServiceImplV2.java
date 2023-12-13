@@ -11,6 +11,12 @@ public class StartServiceImplV2 extends StartServiceImplV1 {
 		// 코드를 그대로 실행하겠다
 		// super(); 코드는 생성자에서 항상 위에 있어야된다
 		super();
+		// ImplV1 에서는 St...ServiceImplV1() 을 사용하여
+		// stService 를 초기화 하였다
+		// 하지만 여기에서는 ImplV2 를 사용하고 싶다
+		// 그럴때는 다시 stService 를 ImplV2() 로 초기화를
+		// 하면된다
+//		stService = new StudentServiceImplV2();
 	}
 
 	@Override
@@ -37,8 +43,7 @@ public class StartServiceImplV2 extends StartServiceImplV1 {
 			this.mainMenu();
 			System.out.print("업무선택 >> ");
 			String str = scan.nextLine();
-			if (str.equals("QUIT"))
-				return null;
+			if (str.equals("QUIT"))return null;
 			try {
 				selectMenu = Integer.valueOf(str);
 			} catch (Exception e) {
@@ -60,18 +65,18 @@ public class StartServiceImplV2 extends StartServiceImplV1 {
 			Integer selectMenu = this.selectMenu();
 			if (selectMenu == null)
 				break;
-			else if(selectMenu == 1) {
-				// 학생정보 입력
-				System.out.println("학생정보 입력");
-			} else if(selectMenu ==2 ) {
+			else if(selectMenu == MenuIndex.학생정보_입력.getIndex()) {				
+				stService.inputStudents();
+			} else if(selectMenu ==MenuIndex.학생정보_조회.getIndex() ) {
 				System.out.println("학생정보 조회");
-				// 학생정보 조회
-			} else if(selectMenu == 3) {
+				
+			} else if(selectMenu == MenuIndex.학생정보_가져오기.getIndex()) {
 				System.out.println("학생정보 가져오기");
-				// 학생정보 가져오기
-			} else if(selectMenu == 4) {
-				System.out.println("학생정보 출력");
-				// 학생정보 출력
+				
+			} else if(selectMenu == MenuIndex.학생정보_출력.getIndex()) {
+//				System.out.println("학생정보 출력");
+				stService.printStudent();
+				
 			}
 			
 		}
