@@ -5,11 +5,11 @@ import com.callor.sudent.service.StartService;
 
 public class MainExA {
 	public static void main(String[] args) {
+		String studentDataFile = "src/com/callor/student/data/Student.txt";
 		StartService start = new StartServiceImplV2();
-//		start.mainMenu();
-		
+		start.mainMenu();
 //		Integer result = start.selectMenu();
-		start.startApp();
+//		start.startApp();
 		
 		
 		
