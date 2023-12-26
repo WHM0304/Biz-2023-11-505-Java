@@ -20,7 +20,24 @@ public class CardDto extends Object{
 		// TODO Auto-generated constructor stub
 	}
 	
+	public String getPattern(int index) {
+		return this.getPatterns()[index];
+	}
 	
+	
+	public String[] getPatterns(){
+		String[] patterns = {
+			String.format("┌────────────┐"),
+			String.format("│            │"),
+			String.format("│     %1s      │",this.suit),
+			String.format("│            │"),
+			String.format("│            │"),
+			String.format("│            │"),
+			String.format("│    %2s      │",this.denomination),
+			String.format("└────────────┘")
+		};
+		return patterns;
+	}
 	
 	
 	
