@@ -21,7 +21,7 @@ public class KeyBoardAA {
 			return;
 		}
 		if(num < 10) {
-			System.out.println("10보다 큰값을 입력해주세요");
+			System.out.println("10이상의 값을 입력해주세요");
 			System.out.println("프로젝트를 다시 실행 해 주세요");
 			return;
 		}

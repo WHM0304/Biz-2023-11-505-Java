@@ -11,9 +11,8 @@ public class InputE {
 
 		while (true) {
 
-			System.out.print("정수(QUIT : 끝내기) 1 >> ");
-			String str1 = scan.nextLine();
-			System.out.println(str1 == "QUIT");
+			System.out.print("정수(QUIT : 끝내기) >> ");
+			String str1 = scan.nextLine();			
 			if (str1.equals("QUIT")) {
 				return false;
 			}

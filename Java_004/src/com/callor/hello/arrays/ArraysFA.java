@@ -31,7 +31,7 @@ public class ArraysFA {
 		}
 
 		for(int i = 0; i <STUDENT_LENGTH ; i++) {
-			avgs[i] = (float)sums[i] / 3;
+			avgs[i] = (float)sums[i] / SUBJECT_COUNT;
 			
 		}
 		// 과목별 총점
